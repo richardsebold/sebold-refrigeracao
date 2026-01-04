@@ -3,6 +3,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-azul-primario: #1C4D8D;
+  --color-azul-secundario: #4988C4;
   --font-inter: var(--font-inter);
   --font-monteserrat: var(--font-montserrat);
   --radius-sm: calc(var(--radius) - 4px);
