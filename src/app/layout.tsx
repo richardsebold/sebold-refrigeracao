@@ -4,6 +4,8 @@ import { Agbalumo } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Header from "@/components/Header";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 
 const agbalumo = Agbalumo({
   weight: ["400"],
@@ -32,14 +34,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <SidebarProvider>
     <html lang="en">
       <body
         suppressHydrationWarning className={`${inter.className} font-sntialiased`}
       >
-        <Header />
-        {children}
-        <WhatsAppButton />
+        <AppSidebar />
+        <main>
+          <Header />
+          {children}
+          <WhatsAppButton />
+        </main>
       </body>
     </html>
+    </SidebarProvider>
   );
 }
