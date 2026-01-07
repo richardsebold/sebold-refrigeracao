@@ -1,7 +1,0 @@
-export default function components() {
- return (
-   <div>
-
-   </div>
- );
-}

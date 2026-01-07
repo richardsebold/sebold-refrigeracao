@@ -1,26 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
-import { Agbalumo } from "next/font/google";
+import { Inter, 
+  // Montserrat 
+} 
+  from "next/font/google";
+// import { Agbalumo } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Header from "@/components/Header";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
 
-const agbalumo = Agbalumo({
-  weight: ["400"],
-  subsets: ["latin"],
-});
+
+// const agbalumo = Agbalumo({
+//   weight: ["400"],
+//   subsets: ["latin"],
+// });
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
-const montserrat = Montserrat({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
+// const montserrat = Montserrat({
+//   weight: ["400", "500", "600", "700"],
+//   subsets: ["latin"],
+// });
 
 
 export const metadata: Metadata = {
@@ -34,12 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SidebarProvider>
     <html lang="en">
       <body
         suppressHydrationWarning className={`${inter.className} font-sntialiased`}
       >
-        <AppSidebar />
         <main>
           <Header />
           {children}
@@ -47,6 +47,5 @@ export default function RootLayout({
         </main>
       </body>
     </html>
-    </SidebarProvider>
   );
 }
