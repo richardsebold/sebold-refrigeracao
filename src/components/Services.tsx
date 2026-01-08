@@ -1,6 +1,7 @@
 'use client'
 
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay"
 import { ChevronLeft, ChevronRight, Scissors, Syringe, CarTaxiFront, Hotel, Clock } from 'lucide-react'
 import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 
@@ -12,6 +13,7 @@ export function Services() {
         title: "Banho & Tosa",
         description: "Inclui banho com produtos específicos para o tipo de pelagem e pele do animal, corte de unhas, limpeza das orelhas e tosa personalizada (higiênica ou estilizada).",
         duration: "1h",
+        urlImage: "/gemini_geladeira.png",
         price: "$50",
         icon: <Scissors />,
         linkText: 'Olá, vi no site sobre Banho e tosa e gostaria de mais informações.'
@@ -20,6 +22,7 @@ export function Services() {
         title: "Consulta Veterinária",
         description: "Oferece atendimento clínico básico ou especializado para cuidar da saúde do animal. Inclui diagnóstico de doenças, aplicação de vacinas obrigatórias.",
         duration: "1h",
+        urlImage: "/gemini_ac.png",
         price: "$45",
         icon: <Syringe />,
         linkText: 'Olá, vi no site sobre Consulta veterinária e gostaria de mais informações.'
@@ -27,6 +30,7 @@ export function Services() {
     {
         title: "Táxi Pet",
         description: "Serviço de transporte para levar e buscar os pets no petshop, clínicas veterinárias ou outros locais. Ideal para tutores que não têm tempo ou transporte adequado para locomover os animais.",
+        urlImage: "/gemini_ac.png",
         duration: "2h",
         price: "$80",
         icon: <CarTaxiFront />,
@@ -35,6 +39,7 @@ export function Services() {
     {
         title: "Hotel para pets",
         description: "Serviço de hospedagem para animais de estimação, ideal para quando os tutores precisam viajar ou se ausentar por alguns dias. Os pets ficam acomodados em espaços seguros, confortáveis.",
+        urlImage: "/gemini_maquinaLavar.png",
         duration: "1h",
         price: "$60",
         icon: <Hotel />,
@@ -49,7 +54,9 @@ export function Services() {
         breakpoints: {
             "(min-width: 768px)": { slidesToScroll: 3 }
         }
-    })
+    }, [
+        Autoplay({ delay: 3000, stopOnInteraction: false })
+    ])
 
 
     function scrollPrev () {
@@ -60,9 +67,8 @@ export function Services() {
     }
 
     return (
-        <section className="bg-white py-16">
-            <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold mb-12">Serviços</h2>
+        <section className="bg-white w-full">
+            <div className="w-full">
 
                 <div className="relative">
 
@@ -70,22 +76,23 @@ export function Services() {
 
                         <div className="flex">
                             {services.map((item, index) => (
-                                <div className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/3)] px-3" key={index}>
-                                    <article className="bg-[#1e293b] text-white rounded-2xl p-6 space-y-4 h-full flex flex-col">
+                                <div className="flex-[0_0_100%] min-w-0" key={index}>
+                                    <article className="bg-cover bg-center bg-no-repeat text-white p-6 space-y-4 h-full flex flex-col" style={{ backgroundImage: `url(${item.urlImage})` }}>
+                                        <div className="absolute inset-0 bg-black/30 z-10"></div>
                                         <div className="flex-1 flex items-start justify-between ">
 
                                             <div className="flex gap-3">
                                                 <span className="text-3xl">{item.icon}</span>
                                                 <div>
                                                     <h3 className="font-bold text-xl my-1">{item.title}</h3>
-                                                    <p className="text-gray-400 text-sm select-none">{item.description}</p>
+                                                    <p className="text-white text-sm select-none">{item.description}</p>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="border-t border-gray-700 pt-4 flex items-center justify-between">
                                             <div className="flex items-center gap-2 text-sm">
-                                                <Clock className="w-4 h-4 " />
+                                                <Clock className="w-4 h-4" />
                                                 <span>{item.duration}</span>
                                             </div>
 
@@ -106,13 +113,13 @@ export function Services() {
                     
                     <button 
                     onClick={scrollPrev}
-                    className="bg-white flex items-center justify-center rounded-full shadow-lg w-10 h-10 absolute left-3 top-1/2 -translate-y-1/2 -translate-x-1/2 cursor-pointer z-10">
+                    className="bg-white flex items-center justify-center rounded-full shadow-lg w-10 h-10 absolute left-1 top-1/2 -translate-y-1/2 cursor-pointer z-10">
                         <ChevronLeft className="w-6 h-6 text-gray-600"  />
                     </button>
                     
                     <button 
                     onClick={scrollNext}
-                    className="bg-white flex items-center justify-center rounded-full shadow-lg w-10 h-10 absolute -right-6 top-1/2 -translate-y-1/2 -translate-x-1/2 cursor-pointer z-10">
+                    className="bg-white flex items-center justify-center rounded-full shadow-lg w-10 h-10 absolute right-1 top-1/2 -translate-y-1/2 cursor-pointer z-10">
                         <ChevronRight className="w-6 h-6 text-gray-600"  />
                     </button>
 
