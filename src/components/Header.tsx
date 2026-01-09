@@ -10,7 +10,7 @@ import {
   MapPin, TextAlignJustify } from "lucide-react";
 import Image from "next/image";
 // import OrcamentoWhatsapp from "./header/OrcamentoWhatsapp";
-import { phoneNumber, message } from "./WhatsappButton";
+// import { phoneNumber, message } from "./WhatsappButton";
 
 
 export default function Header() {
@@ -42,7 +42,7 @@ export default function Header() {
 
           <div className="flex gap-2">
 
-            <a href={`https://wa.me/${phoneNumber}?text=${message}`}>
+            <a href={`https://wa.me/554799348969?text=Olá, vim pelo site e gostaria de saber mais informações.`}>
               <WhatsappLogoIcon color="white" size={40} weight="regular" />
             </a>
             <a href="https://www.facebook.com/profile.php?id=100054529447699" target="_blank" rel="noopener noreferrer">
