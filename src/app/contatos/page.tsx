@@ -20,7 +20,7 @@ export default function Contatos() {
           <div className="relative top-1.5">
             <a href="#">
               <p>Tem alguma duvida? Entre em contato</p>
-              <h3>seboldrefrigeracao@gmail.com</h3>
+              <h3><strong>seboldrefrigeracao@gmail.com</strong></h3>
             </a>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function Contatos() {
           <div className="relative top-1.5">
             <a href="#">
               <p>Whatsapp</p>
-              <h3>(47) 99934-8969</h3>
+              <h3><strong>(47) 99934-8969</strong></h3>
             </a>
           </div>
         </div>
