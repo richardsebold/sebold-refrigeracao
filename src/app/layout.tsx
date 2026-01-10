@@ -5,7 +5,7 @@ import { Inter,
   from "next/font/google";
 // import { Agbalumo } from "next/font/google";
 import "./globals.css";
-import WhatsAppButton from "../../src/components/WhatsappButton";
+import WhatsAppButton from "../components/WhatsappButton";
 import Header from "@/components/Header";
 
 
