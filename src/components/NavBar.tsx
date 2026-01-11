@@ -164,7 +164,7 @@ export default function NavigationManager() {
           </div>
 
           {/* --- 2. CENTRO: Logo (Absolute para garantir o centro exato) --- */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="md:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="relative w-32 h-12 bg-white rounded-md overflow-hidden shadow-sm">
               <Image
                 src="/assets/logo-cab.jpg"
