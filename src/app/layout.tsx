@@ -5,8 +5,8 @@ import { Inter,
   from "next/font/google";
 // import { Agbalumo } from "next/font/google";
 import "./globals.css";
-import WhatsAppButton from "../components/WhatsappButton";
 import AosInit from "@/components/aos-init";
+import BotaoWhatsapp from "@/components/BotaoWhatsapp";
 
 
 // const agbalumo = Agbalumo({
@@ -43,7 +43,7 @@ export default function RootLayout({
         <main>
           {children}
           <AosInit />
-          <WhatsAppButton />
+          <BotaoWhatsapp />
         </main>
       </body>
     </html>
