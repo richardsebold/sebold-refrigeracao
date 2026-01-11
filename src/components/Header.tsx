@@ -13,7 +13,7 @@ export default function Header() {
             {/* 1. LOGO */}
             <div className="">
               <Image
-              src="/logo-cab.jpg"
+              src="/assets/logo-cab.jpg"
               alt="Sebold Refrigeracao"
               className="object-contain"
               width={400}
