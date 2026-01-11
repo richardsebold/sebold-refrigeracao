@@ -98,7 +98,7 @@ export default function NavigationManager() {
 
       {/* ================= BARRA ESTÁTICA DESKTOP ================= */}
       <div className="w-full bg-[#049B8D] mt-2 shadow-md relative z-40 hidden md:block">
-        <div className="container mx-auto h-16 flex items-center justify-between px-4">
+        <div className="container mx-auto h-16 flex items-center justify-between px-4 md:px-30">
 
           <div className="flex items-center gap-4">
             <div className="hidden md:flex gap-2" data-aos="fade-right">
@@ -136,7 +136,7 @@ export default function NavigationManager() {
         className={`fixed top-0 left-0 w-full bg-[#049B8D] shadow-xl transition-transform duration-500 z-50 ${scrolled ? "translate-y-0" : "-translate-y-full"}`}
       >
         {/* Adicionei 'relative' aqui para a logo poder se centralizar baseada neste container */}
-        <div className="container mx-auto h-20 flex items-center justify-between px-4 relative">
+        <div className="container mx-auto h-20 flex items-center justify-between px-4 md:px-30 relative">
 
           {/* --- 1. LADO ESQUERDO: Botão Mobile + Menu Desktop --- */}
           <div className="flex items-center gap-4">
@@ -148,6 +148,19 @@ export default function NavigationManager() {
             >
               {isMenuOpen ? <X size={32} /> : <AlignJustify size={32} color="white" />}
             </button>
+
+            
+            <div className="hidden md:block relative w-32 h-12 bg-white rounded-md overflow-hidden shadow-sm">
+              <Image
+                src="/assets/logo-cab.jpg"
+                alt="Logo"
+                fill
+                className="object-contain p-1"
+              />
+            </div>
+          
+
+            
 
             {/* Menu Desktop (Links na Esquerda) */}
             <nav className="hidden md:flex gap-6 text-white font-bold">
@@ -174,6 +187,8 @@ export default function NavigationManager() {
               />
             </div>
           </div>
+
+          
 
           {/* --- 3. LADO DIREITO: Botão de Orçamento --- */}
           <div>

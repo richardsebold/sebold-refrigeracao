@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="flex w-full flex-col justify-center items-center bg-white" id="home">
 
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-20">
           <div className="flex flex-col md:flex-row items-center justify-between mb-3">
             
             {/* 1. LOGO */}
