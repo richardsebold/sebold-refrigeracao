@@ -148,7 +148,7 @@ export default function NavigationManager() {
             </button>
 
             <div className="relative w-32 h-12 bg-white rounded-md overflow-hidden">
-              <Image src="/logo-cab.jpg" alt="Logo" fill className="object-contain" />
+              <Image src="/assets/logo-cab.jpg" alt="Logo" fill className="object-contain" />
             </div>
 
             <div className="hidden md:flex gap-4 text-white font-bold">

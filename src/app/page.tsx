@@ -1,6 +1,6 @@
 import { About } from "@/components/About";
 import { Carousel } from "@/components/Carousel";
-import Infos from "@/components/contatos/Infos";
+import Infos from "@/components/Infos";
 import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
 import NavBar from "@/components/NavBar";

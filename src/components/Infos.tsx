@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import Maps from "./Maps";
-import { Separator } from "../ui/separator";
+import { Separator } from "./ui/separator";
 
 export default function Infos() {
     return (

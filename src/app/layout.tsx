@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "Manutenção",
     "Sebold Refrigeração",
   ],
-  authors: [{ name: "Adir Sebold", url: "https://seboldrefrigeracao.com.br" }],
+  authors: [{ name: "Sebold Refrigeração", url: "https://seboldrefrigeracao.com.br" }],
   creator: "Sebold Refrigeração",
   openGraph: {
     type: "website",
