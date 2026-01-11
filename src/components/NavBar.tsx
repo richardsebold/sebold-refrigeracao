@@ -133,41 +133,62 @@ export default function NavigationManager() {
 
       {/* ================= BARRA FIXA ================= */}
       <div
-        className={`fixed top-0 left-0 w-full bg-[#049B8D] shadow-xl
-        transition-transform duration-500 z-50
-        ${scrolled ? "translate-y-0" : "-translate-y-full"}`}
+        className={`fixed top-0 left-0 w-full bg-[#049B8D] shadow-xl transition-transform duration-500 z-50 ${scrolled ? "translate-y-0" : "-translate-y-full"}`}
       >
+        {/* Adicionei 'relative' aqui para a logo poder se centralizar baseada neste container */}
         <div className="container mx-auto h-20 flex items-center justify-between px-4 relative">
 
+          {/* --- 1. LADO ESQUERDO: Botão Mobile + Menu Desktop --- */}
           <div className="flex items-center gap-4">
+
+            {/* Botão Hamburger (Só aparece no Mobile) */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-white p-2 hover:bg-white/10 rounded-md"
+              className="md:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors"
             >
-              {isMenuOpen ? <X size={32} /> : <AlignJustify size={32} />}
+              {isMenuOpen ? <X size={32} /> : <AlignJustify size={32} color="white" />}
             </button>
 
-            <div className="relative w-32 h-12 bg-white rounded-md overflow-hidden">
-              <Image src="/assets/logo-cab.jpg" alt="Logo" fill className="object-contain" />
-            </div>
-
-            <div className="hidden md:flex gap-4 text-white font-bold">
-              {navLinks.map(link => (
-                <a key={link.name} href={link.href} className="text-white font-bold p-2 hover:bg-white/10 rounded-md hover:scale-110 transition-all duration-300">
+            {/* Menu Desktop (Links na Esquerda) */}
+            <nav className="hidden md:flex gap-6 text-white font-bold">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-white text-sm lg:text-base font-bold p-2 hover:bg-white/10 rounded-md hover:scale-105 transition-all duration-300"
+                >
                   {link.name}
                 </a>
               ))}
+            </nav>
+          </div>
+
+          {/* --- 2. CENTRO: Logo (Absolute para garantir o centro exato) --- */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="relative w-32 h-12 bg-white rounded-md overflow-hidden shadow-sm">
+              <Image
+                src="/assets/logo-cab.jpg"
+                alt="Logo"
+                fill
+                className="object-contain p-1"
+              />
             </div>
           </div>
 
-          <a
-            href="https://wa.me/554799348969"
-            className="hidden sm:block bg-white text-[#049B8D] px-5 py-2 rounded-full font-bold p-2 hover:scale-110 transition-all duration-300"
-          >
-            PEDIR ORÇAMENTO
-          </a>
+          {/* --- 3. LADO DIREITO: Botão de Orçamento --- */}
+          <div>
+            <a
+              href="https://wa.me/554799348969"
+              className="hidden sm:block bg-white text-[#049B8D] px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition-all duration-300 shadow-md"
+            >
+              PEDIR ORÇAMENTO
+            </a>
+            {/* Espaço vazio no mobile para equilibrar o layout se necessário, ou deixe vazio */}
+          </div>
+
         </div>
 
+        {/* Dropdown do Mobile */}
         {scrolled && <MobileMenuDropdown isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       </div>
     </div>

@@ -39,7 +39,7 @@ export default function Infos() {
                         </div>
                         <div>
                             <h3 className="font-bold text-xl text-gray-900">Telefone</h3>
-                            <p className="text-gray-600 mt-1 hover:underline">
+                            <p className="text-gray-600 mt-1 underline">
                                 <a href="tel:+5547999348969" target="_blank">+55 47 99934-8969</a>
                             </p>
                         </div>
@@ -54,7 +54,7 @@ export default function Infos() {
                         </div>
                         <div className="overflow-hidden"> {/* overflow evita que email longo quebre o layout */}
                             <h3 className="font-bold text-xl text-gray-900">Email</h3>
-                            <p className="text-gray-600 mt-1 wrap-break-words hover:underline">
+                            <p className="text-gray-600 mt-1 wrap-break-words underline">
                                 <a target="_blank" href="mailto:seboldrefrigeracao@gmail.com">seboldrefrigeracao@gmail.com</a>
                             </p>
                         </div>
@@ -69,7 +69,7 @@ export default function Infos() {
                         </div>
                         <div>
                             <h3 className="font-bold text-xl text-gray-900">Localização</h3>
-                            <p className="text-gray-600 mt-1 max-w-xs hover:underline">
+                            <p className="text-gray-600 mt-1 max-w-xs underline">
                                 <a target="_blank" href="https://maps.app.goo.gl/FDVmjYRr4UWKyo919">Rua Corona Austrális N-61, Jardim Paraiso, Joinville - SC</a>
                             </p>
                         </div>

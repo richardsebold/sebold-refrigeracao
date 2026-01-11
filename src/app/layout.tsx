@@ -8,7 +8,7 @@ import {
 import "./globals.css";
 import AosInit from "@/components/aos-init";
 import BotaoWhatsapp from "@/components/BotaoWhatsapp";
-
+import { Analytics } from '@vercel/analytics/next';
 
 // const agbalumo = Agbalumo({
 //   weight: ["400"],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   description: "Instalação e manutenção de ar condicionado é com a Sebold Refrigeração. Atendemos Joinville e região com qualidade há mais de 20 anos. Confira!",
   keywords: [
     "Refrigeração",
-    "Climatização",
+    "Ar condicionado",
     "Instalação",
     "Manutenção",
     "Sebold Refrigeração",
@@ -78,6 +78,7 @@ export const metadata: Metadata = {
         >
           <main>
             {children}
+            <Analytics />
             <AosInit />
             <BotaoWhatsapp />
           </main>
