@@ -2,42 +2,42 @@ import { AirVent, Thermometer, Wrench, Settings, Refrigerator, BrushCleaning } f
 
 export default function Services() {
   // Dados dos serviços para evitar repetição de código
-  const servicesData = [
+const servicesData = [
     {
       title: "Instalação de Ar Condicionado",
       icon: <AirVent className="text-[#049B8D]" size={40} />,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex tempora iusto magnam."
+      description: "Instalação técnica seguindo normas do fabricante, garantindo dimensionamento correto, acabamento impecável e máxima eficiência energética."
     },
     {
       title: "Manutenção Preventiva",
       icon: <Settings className="text-[#049B8D]" size={40} />,
-      description: "Velit, cum dolor. Ad sed natus voluptatem quam consectetur fugit? Quam saepe sequi."
+      description: "Evite falhas repentinas e gastos elevados. Nossa revisão periódica aumenta a vida útil do aparelho e reduz o consumo de energia."
     },
     {
       title: "Manutenção de Geladeira",
       icon: <Refrigerator className="text-[#049B8D]" size={40} />,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex tempora iusto magnam."
+      description: "Diagnóstico rápido e preciso para falhas de refrigeração ou elétrica. Recuperamos a performance ideal para conservar seus alimentos."
     },
     {
       title: "Reparo em Máquina de Lavar",
       icon: <Wrench className="text-[#049B8D]" size={40} />,
-      description: "Ad sed natus voluptatem quam consectetur fugit? Quam saepe sequi cum nulla dolorem quis?"
+      description: "Soluções para máquinas com ruído, vazamentos ou falhas no ciclo. Utilizamos peças de qualidade para restaurar o funcionamento perfeito."
     },
     {
       title: "Limpeza de Ar Condicionado",
       icon: <BrushCleaning className="text-[#049B8D]" size={40} />,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex tempora iusto magnam."
+      description: "Higienização profunda que elimina fungos e bactérias. Garanta um ar mais saudável para sua família e melhore o rendimento do aparelho."
     },
     {
       title: "Carga de Gás",
       icon: <Thermometer className="text-[#049B8D]" size={40} />,
-      description: "Velit, cum dolor. Ad sed natus voluptatem quam consectetur fugit? Quam saepe sequi."
+      description: "Reposição de fluido refrigerante com detecção prévia de vazamentos. Seu equipamento voltando a gelar com a potência máxima."
     },
   ];
 
   return (
-    <div className="px-4 py-12" id="services">
-      <h2 className="text-3xl mb-12 md:text-4xl text-center">
+    <div className="px-4 pb-12" id="services">
+      <h2 className="text-3xl mb-20 md:text-4xl text-center">
         Nossos <strong className="font-bold">Serviços</strong>
       </h2>
 

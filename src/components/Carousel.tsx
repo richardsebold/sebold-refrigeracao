@@ -11,35 +11,35 @@ export function Carousel() {
         {
             title: "INSTALAÇÃO DE AR CONDICIONADO",
             descripition: "Especialista em instalação de Ar Condicionado split e central.",
-            urlImage: "/ac1.jpg",
+            urlImage: "/assets/carrosel/ac1.jpg",
             icon: <ThermometerSnowflake size={40} />,
             linkText: 'Olá, gostaria de saber mais sobre instalação de ar condicionado.'
         },
         {
             title: "MANUTENÇÃO DE MÁQUINA DE LAVAR",
             descripition: "Diagnóstico preciso e reparo especializado para sua lavadora.",
-            urlImage: "/gemini_ac.png",
+            urlImage: "/assets/carrosel/gemini_maquinaLavar.png",
             icon: <Wrench size={40} />,
             linkText: 'Olá, gostaria de saber mais sobre manutenção de máquina de lavar.'
         },
         {
             title: "MANUTENÇÃO DE AR CONDICIONADO",
             descripition: "Limpeza química, higienização e carga de gás completa.",
-            urlImage: "/acCleaning.jpg",
+            urlImage: "/assets/carrosel/acCleaning.jpg",
             icon: <CarTaxiFront size={40} />,
             linkText: 'Olá, gostaria de saber mais sobre manutenção de ar condicionado.'
         },
         {
             title: "REPARO DE GELADEIRAS",
             descripition: "Assistência técnica especializada em refrigeradores e freezers.",
-            urlImage: "/gemini_maquinaLavar.png",
+            urlImage: "/assets/carrosel/gemini_geladeira.png",
             icon: <Refrigerator size={40} />,
             linkText: 'Olá, gostaria de saber mais sobre reparo de geladeiras.'
         },
         {
             title: "REPARO",
             descripition: "Assistência técnica especializada em refrigeradores e freezers.",
-            urlImage: "/gemini_maquinaLavar.png",
+            urlImage: "/assets/carrosel/ac2.jpg",
             icon: <Refrigerator size={40} />,
             linkText: 'Olá, gostaria de saber mais sobre reparo de geladeiras.'
         },
@@ -75,9 +75,9 @@ export function Carousel() {
 
                         <div className="flex">
                             {services.map((item, index) => (
-                                <div className="flex-[0_0_100%] md:flex-[0_0_33.333%] min-w-0" key={index}>
+                                <div className="flex-[0_0_100%] min-w-0" key={index}>
                                     <article
-                                        className="relative bg-cover bg-center bg-no-repeat text-white h-72"
+                                        className="relative bg-cover bg-center bg-no-repeat text-white h-80"
                                         style={{ backgroundImage: `url(${item.urlImage})` }}
                                     >
 
@@ -97,9 +97,9 @@ export function Carousel() {
 
                                             <div className="flex items-center justify-center">
                                                 <div className="">
-                                                    <a target="_blank" href={`https://wa.me/5547997714395?text=${item.linkText}`} className="items-center flex justify-center bg-green-500 gap-2 md:hover:bg-green-500 px-6 py-2 rounded-md transition-all hover:scale-105 duration-300 ">
-                                                        <WhatsappLogoIcon className="w-4 h-4" />
-                                                        <p>Agendar</p>
+                                                    <a target="_blank" href={`https://wa.me/5547997714395?text=${item.linkText}`} className="items-center flex justify-center bg-[#25D366] gap-2 md:hover:bg-green-500 px-6 py-2 rounded-md transition-all hover:scale-105 duration-300 ">
+                                                        <WhatsappLogoIcon className="w-5 h-5" />
+                                                        <p className="uppercase">Agendar</p>
                                                     </a>
                                                 </div>
                                             </div>

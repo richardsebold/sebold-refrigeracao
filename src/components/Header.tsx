@@ -1,6 +1,4 @@
-import { Carousel } from "./Carousel";
-import { InstagramLogoIcon, WhatsappLogoIcon, FacebookLogoIcon } from "@phosphor-icons/react/dist/ssr";
-import { BadgeCheck, Calendar, HomeIcon, MapPin, Phone, TextAlignJustify, ThumbsUp } from "lucide-react";
+import { Calendar, Phone, ThumbsUp } from "lucide-react";
 import Image from "next/image";
 
 export default function Header() {
@@ -46,18 +44,6 @@ export default function Header() {
                     <h3 className="font-bold text-gray-800 text-sm lg:text-base">(47) 99934-8969</h3>
                     <p className="text-xs lg:text-sm text-gray-500 mt-1">Joinville - SC<br/>Atendimento rápido</p>
                 </div>
-            </div>
-
-            {/* 3. INFO MOBILE (Visível apenas em celulares) */}
-            <div className="flex flex-col items-center text-center justify-center gap-3 md:hidden mt-2 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <BadgeCheck className="text-[#049B8D] w-5 h-5" /> 
-                <p>Há mais de 20 anos no mercado</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="text-[#049B8D] w-5 h-5" /> 
-                <p>Joinville - SC</p>
-              </div>
             </div>
 
           </div>

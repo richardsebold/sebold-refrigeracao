@@ -1,15 +1,15 @@
-import consul from '../../public/consul.png'
-import carrier from '../../public/Carrier.png'
-import eletrolux from '../../public/Electrolux.png'
-import fujitsu from '../../public/Fujitsu.png'
-import gree from '../../public/gree.png'
-import elgin from '../../public/elgin-logo-6.png'
-import komeco from '../../public/komeco.png'
-import lg from '../../public/LG.png'
-import midea from '../../public/midea-logo-1024x411.png'
-import samsung from '../../public/Samsung.png'
-import philco from '../../public/philco.png'
-import york from '../../public/york-1.png'
+import consul from '../../public/assets/marcas/consul.png'
+import carrier from '../../public/assets/marcas/Carrier.png'
+import eletrolux from '../../public/assets/marcas/Electrolux.png'
+import fujitsu from '../../public/assets/marcas/Fujitsu.png'
+import gree from '../../public/assets/marcas/gree.png'
+import elgin from '../../public/assets/marcas/elgin-logo-6.png'
+import komeco from '../../public/assets/marcas/komeco.png'
+import lg from '../../public/assets/marcas/LG.png'
+import midea from '../../public/assets/marcas/midea-logo-1024x411.png'
+import samsung from '../../public/assets/marcas/Samsung.png'
+import philco from '../../public/assets/marcas/philco.png'
+import york from '../../public/assets/marcas/york-1.png'
 import Image from 'next/image'
 import { FacebookLogo, InstagramLogo, WhatsappLogoIcon } from '@phosphor-icons/react/dist/ssr'
 import { Calendar, Clock } from 'lucide-react'
@@ -48,19 +48,19 @@ export function Footer() {
                   rel="noopener noreferrer"
                 >
                   <Image
-                  src={item.logo}
-                  alt={item.name}
-                  width={100}
-                  height={50}
-                  quality={100}
-                  style={{
-                    width: "auto",
-                    height: "auto",
-                    maxWidth: "100%", // Garante que não estoure o container
-                    maxHeight: "60px" // Limita altura para padronizar logotipos verticais
-                  }}
-                  className="object-contain"
-                />
+                    src={item.logo}
+                    alt={item.name}
+                    width={100}
+                    height={50}
+                    quality={100}
+                    style={{
+                      width: "auto",
+                      height: "auto",
+                      maxWidth: "100%", // Garante que não estoure o container
+                      maxHeight: "60px" // Limita altura para padronizar logotipos verticais
+                    }}
+                    className="object-contain"
+                  />
                 </a>
               </div>
             ))}
@@ -74,7 +74,8 @@ export function Footer() {
             <p>CNPJ: 00.000.000/0000-00</p>
             <p className='mb-4'>Cuidando do seu lar com amor e dedicação.</p>
             <a
-              href="#"
+              target='_blank'
+              href="https://wa.me/554799348969?text=Olá, vim pelo site e gostaria de saber mais informações."
               className='bg-green-500 px-4 py-2 rounded-md inline-block hover:bg-green-600 transition-all hover:scale-105 duration-300 '
             >
               <div className='flex gap-2'>
@@ -84,64 +85,72 @@ export function Footer() {
             </a>
           </div>
 
-          <div>
-            <h3 className='text-2xl font-bold mb-2'>Informações de Contato</h3>
-            <p>Email: teste@teste.com</p>
-            <p>Telefone: (47) 91234-5678</p> {/* Ajustei para um formato comum de SC (Joinville) */}
-            <a href="#" className='cursor-pointer hover:underline'>
-              <p>Localização: Rua Corona Austrális N-61, Jardim Paraiso, Joinville - SC</p>
-            </a>
-          </div>
-
           <div className='flex flex-col gap-3'>
-            <h3 className='text-2xl font-bold'>Horário de atendimento</h3>
-            <div>
-              <div className='flex gap-2'>
-                <h4 className='text-xl font-semibold'>Dias da semana</h4>
-                <Calendar className='relative top-1' size={20} />
-              </div>
-              <p>Segunda-feira a Sabado</p>
-            </div>
-            <div>
-              <div className='flex gap-2'>
-                <h4 className='text-xl font-semibold'>Horário</h4>
-                <Clock className='relative top-1' size={20} />
-              </div>
-              <p>07:00 - 22:00</p>
-            </div>
+            <h3 className='text-2xl font-bold mb-2'>Informações de Contato</h3>
 
-          </div>
+            <p>Email: 
+              <a className='underline md:hover:underline' href="mailto:seboldrefrigeracao@gmail.com"> seboldrefrigeracao@gmail.com</a>
+            </p>
 
-          <div>
-            <h3 className='text-2xl font-bold mb-2'>Redes sociais</h3>
-            <div className='flex gap-4'>
-              <a
-                href="#"
-                target='_blank'
-                className='hover:text-gray-200 transition-colors'
-              >
-                <FacebookLogo className='w-8 h-8' />
-              </a>
-              <a
-                href="#"
-                target='_blank'
-                className='hover:text-gray-200 transition-colors'
-              >
-                <InstagramLogo className='w-8 h-8' />
-              </a>
-              <a
-                href="#"
-                target='_blank'
-                className='hover:text-gray-200 transition-colors'
-              >
-                <WhatsappLogoIcon className='w-8 h-8' />
-              </a>
-            </div>
-          </div>
+            <p>Telefone:
+              <a className='underline md:hover:underline' href="tel:554799348969"> +55 (47) 9934-8969</a>
+            </p>
 
-        </footer>
+            <p>Localização: 
+               <a href="https://maps.app.goo.gl/FDVmjYRr4UWKyo919" className='cursor-pointer underline md:hover:underline'> Rua Corona Austrális N-61, Jardim Paraiso, Joinville - SC</a>
+            </p>
 
       </div>
-    </section>
+
+      <div className='flex flex-col gap-3'>
+        <h3 className='text-2xl font-bold'>Horário de atendimento</h3>
+        <div>
+          <div className='flex gap-2'>
+            <h4 className='text-xl font-semibold'>Dias da semana</h4>
+            <Calendar className='relative top-1' size={20} />
+          </div>
+          <p>Segunda-feira a Sabado</p>
+        </div>
+        <div>
+          <div className='flex gap-2'>
+            <h4 className='text-xl font-semibold'>Horário</h4>
+            <Clock className='relative top-1' size={20} />
+          </div>
+          <p>07:00 - 22:00</p>
+        </div>
+
+      </div>
+
+      <div>
+        <h3 className='text-2xl font-bold mb-2'>Redes sociais</h3>
+        <div className='flex gap-4'>
+          <a
+            href="https://www.facebook.com/p/Sebold-Refrigera%C3%A7%C3%A3o-e-Climatiza%C3%A7%C3%A3o-100054529447699/?locale=pt_BR"
+            target='_blank'
+            className='hover:text-gray-200 transition-colors'
+          >
+            <FacebookLogo className='w-8 h-8' />
+          </a>
+          <a
+            href="https://www.instagram.com/seboldrefrigeracao?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target='_blank'
+            className='hover:text-gray-200 transition-colors'
+          >
+            <InstagramLogo className='w-8 h-8' />
+          </a>
+          <a
+            href="https://wa.me/554799348969?text=Olá, vim pelo site e gostaria de saber mais informações."
+            target='_blank'
+            className='hover:text-gray-200 transition-colors'
+          >
+            <WhatsappLogoIcon className='w-8 h-8' />
+          </a>
+        </div>
+      </div>
+
+    </footer>
+
+      </div >
+    </section >
   )
 }

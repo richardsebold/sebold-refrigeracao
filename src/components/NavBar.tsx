@@ -5,6 +5,52 @@ import { FacebookLogoIcon, InstagramLogoIcon, WhatsappLogoIcon } from "@phosphor
 import { MapPin, AlignJustify, X } from "lucide-react"
 import Image from "next/image"
 
+const navLinks = [
+  { name: "Inicio", href: "#home" },
+  { name: "Sobre", href: "#about" },
+  { name: "Serviços", href: "#services" },
+  { name: "Contato", href: "#contact" },
+]
+
+interface MobileMenuDropdownProps {
+  isMenuOpen: boolean
+  setIsMenuOpen: (open: boolean) => void
+}
+
+function MobileMenuDropdown({ isMenuOpen, setIsMenuOpen }: MobileMenuDropdownProps) {
+  return (
+    <div
+      className={`
+        w-full bg-white shadow-xl
+        border-t-4 border-[#049B8D]
+        transition-all duration-500 ease-in-out overflow-hidden
+        z-50 md:hidden
+        ${isMenuOpen ? "max-h-125 opacity-100" : "max-h-0 opacity-0"}
+      `}
+    >
+      <div className="flex flex-col items-center justify-center py-4 gap-2">
+        {navLinks.map(link => (
+          <a
+            key={link.name}
+            href={link.href}
+            onClick={() => setIsMenuOpen(false)}
+            className="text-xl font-bold text-gray-700 hover:text-[#049B8D] transition-colors uppercase tracking-wider border-2 p-2 rounded-md"
+          >
+            {link.name}
+          </a>
+        ))}
+
+        <a target="_blank"
+          href="https://wa.me/554799348969?text=Olá, vim pelo site e gostaria de saber mais informações"
+          className="mt-4 bg-[#049B8D] text-white px-8 py-3 rounded-full font-bold shadow-md w-3/4 text-center hover:bg-[#038579]"
+        >
+          SOLICITAR ORÇAMENTO
+        </a>
+      </div>
+    </div>
+  )
+}
+
 export default function NavigationManager() {
   const [scrolled, setScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,45 +60,6 @@ export default function NavigationManager() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const navLinks = [
-    { name: "Inicio", href: "#home" },
-    { name: "Sobre", href: "#about" },
-    { name: "Serviços", href: "#services" },
-    { name: "Contato", href: "#contact" },
-  ]
-
-  const MobileMenuDropdown = () => (
-    <div
-      className={`
-        w-full bg-white shadow-xl
-        border-t-4 border-[#049B8D]
-        transition-all duration-500 ease-in-out overflow-hidden
-        z-50 md:hidden
-        ${isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
-      `}
-    >
-      <div className="flex flex-col items-center justify-center py-8 gap-6">
-        {navLinks.map(link => (
-          <a
-            key={link.name}
-            href={link.href}
-            onClick={() => setIsMenuOpen(false)}
-            className="text-2xl font-bold text-gray-700 hover:text-[#049B8D] transition-colors uppercase tracking-wider"
-          >
-            {link.name}
-          </a>
-        ))}
-
-        <a
-          href="https://wa.me/554799348969"
-          className="mt-4 bg-[#049B8D] text-white px-8 py-3 rounded-full font-bold shadow-md w-3/4 text-center hover:bg-[#038579]"
-        >
-          SOLICITAR ORÇAMENTO
-        </a>
-      </div>
-    </div>
-  )
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -71,14 +78,22 @@ export default function NavigationManager() {
           </div>
 
           <div className="flex gap-3">
-            <WhatsappLogoIcon size={32} color="white" />
-            <FacebookLogoIcon size={32} color="white" />
-            <InstagramLogoIcon size={32} color="white" />
-            <MapPin size={32} color="white" />
+            <a target="_blank" href={`https://wa.me/554799348969?text=Olá, vim pelo site e gostaria de saber mais informações.`}>
+              <WhatsappLogoIcon size={32} color="white" />
+            </a>
+            <a target="_blank" href="https://www.facebook.com/p/Sebold-Refrigera%C3%A7%C3%A3o-e-Climatiza%C3%A7%C3%A3o-100054529447699/?locale=pt_BR">
+              <FacebookLogoIcon size={32} color="white" />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/seboldrefrigeracao?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <InstagramLogoIcon size={32} color="white" />
+            </a>
+            <a target="_blank" href='https://maps.app.goo.gl/FDVmjYRr4UWKyo919'>
+              <MapPin size={32} color="white" />
+            </a>
           </div>
         </div>
 
-        {!scrolled && <MobileMenuDropdown />}
+        {!scrolled && <MobileMenuDropdown isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       </div>
 
       {/* ================= BARRA ESTÁTICA DESKTOP ================= */}
@@ -86,12 +101,12 @@ export default function NavigationManager() {
         <div className="container mx-auto h-16 flex items-center justify-between px-4">
 
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex gap-2">
+            <div className="hidden md:flex gap-2" data-aos="fade-right">
               {navLinks.map(link => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-white font-bold p-2 hover:bg-white/10 rounded-md"
+                  className="text-white font-bold p-2 hover:bg-white/10 rounded-md hover:scale-110 transition-all duration-300"
                 >
                   {link.name}
                 </a>
@@ -100,10 +115,18 @@ export default function NavigationManager() {
           </div>
 
           <div className="flex gap-3">
-            <WhatsappLogoIcon size={32} color="white" />
-            <FacebookLogoIcon size={32} color="white" />
-            <InstagramLogoIcon size={32} color="white" />
-            <MapPin size={32} color="white" />
+            <a className="transition-all duration-300 hover:scale-110" target="_blank" href={`https://wa.me/554799348969?text=Olá, vim pelo site e gostaria de saber mais informações.`}>
+              <WhatsappLogoIcon size={32} color="white" />
+            </a>
+            <a className="transition-all duration-300 hover:scale-110" target="_blank" href="https://www.facebook.com/p/Sebold-Refrigera%C3%A7%C3%A3o-e-Climatiza%C3%A7%C3%A3o-100054529447699/?locale=pt_BR">
+              <FacebookLogoIcon size={32} color="white" />
+            </a>
+            <a className="transition-all duration-300 hover:scale-110" target="_blank" href="https://www.instagram.com/seboldrefrigeracao?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <InstagramLogoIcon size={32} color="white" />
+            </a>
+            <a className="transition-all duration-300 hover:scale-110" target="_blank" href='https://maps.app.goo.gl/FDVmjYRr4UWKyo919'>
+              <MapPin size={32} color="white" />
+            </a>
           </div>
         </div>
       </div>
@@ -130,7 +153,7 @@ export default function NavigationManager() {
 
             <div className="hidden md:flex gap-4 text-white font-bold">
               {navLinks.map(link => (
-                <a key={link.name} href={link.href}>
+                <a key={link.name} href={link.href} className="text-white font-bold p-2 hover:bg-white/10 rounded-md hover:scale-110 transition-all duration-300">
                   {link.name}
                 </a>
               ))}
@@ -139,13 +162,13 @@ export default function NavigationManager() {
 
           <a
             href="https://wa.me/554799348969"
-            className="hidden sm:block bg-white text-[#049B8D] px-5 py-2 rounded-full font-bold"
+            className="hidden sm:block bg-white text-[#049B8D] px-5 py-2 rounded-full font-bold p-2 hover:scale-110 transition-all duration-300"
           >
             PEDIR ORÇAMENTO
           </a>
         </div>
 
-        {scrolled && <MobileMenuDropdown />}
+        {scrolled && <MobileMenuDropdown isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       </div>
     </div>
   )

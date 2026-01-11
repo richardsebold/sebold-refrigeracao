@@ -1,6 +1,6 @@
 import Image from "next/image";
-import about1img from '../../public/gemini_ac.png';
-import about2img from '../../public/gemini_geladeira.png';
+import about1img from '../../public/assets/carrosel/gemini_ac.png';
+import about2img from '../../public/assets/carrosel/gemini_geladeira.png';
 import { Check, MapPin } from "lucide-react";
 import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 
@@ -26,9 +26,7 @@ export function About() {
                         </div>
 
                         <p className="text-gray-600 leading-relaxed text-lg">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex tempora iusto magnam. 
-                            Velit, cum dolor. Ad sed natus voluptatem quam consectetur fugit? 
-                            Quam saepe sequi cum nulla dolorem quis?
+                            Há quase duas décadas, a Sebold Refrigeração é sinônimo de excelência e confiança no mercado. Desde nossa fundação em 2006, dedicamo-nos a oferecer soluções técnicas precisas e duradouras. Acreditamos tanto na qualificação da nossa equipe e na qualidade dos nossos materiais que oferecemos 12 meses de garantia em nossos serviços — quatro vezes mais que o padrão praticado pelo mercado. Para nós, cada reparo ou instalação é uma oportunidade de reafirmar nosso compromisso absoluto com a sua satisfação.
                         </p>
 
                         {/* Lista de Benefícios */}
@@ -43,7 +41,7 @@ export function About() {
                                 <div className="bg-[#049B8D]/10 p-1 rounded-full">
                                     <Check className="text-[#049B8D]" size={20} />
                                 </div>
-                                <span className="font-medium text-gray-700">6 meses de garantia em serviços</span>
+                                <span className="font-medium text-gray-700">12 meses de garantia em serviços</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <div className="bg-[#049B8D]/10 p-1 rounded-full">
@@ -57,7 +55,7 @@ export function About() {
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a 
                                 target="_blank" 
-                                href="https://wa.me/5547997714395?text=Olá vim pelo site e gostaria de saber mais informações." 
+                                href="https://wa.me/554799348969?text=Olá vim pelo site e gostaria de saber mais informações." 
                                 className="bg-[#049B8D] hover:bg-[#037f73] text-white font-medium flex items-center justify-center gap-2 px-6 py-3 rounded-lg transition-all hover:scale-105 duration-300 shadow-md shadow-[#049B8D]/20"
                             >
                                 <WhatsappLogoIcon className="w-5 h-5" />
@@ -65,11 +63,12 @@ export function About() {
                             </a>
                             
                             <a 
-                                href="#" 
+                                target="_blank"
+                                href="https://maps.app.goo.gl/FDVmjYRr4UWKyo919" 
                                 className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-all hover:scale-105 duration-300 font-medium"
                             >
                                 <MapPin className="w-5 h-5 text-[#049B8D]" />
-                                Endereço da loja
+                                Endereço da empresa
                             </a>
                         </div>
                     </div>

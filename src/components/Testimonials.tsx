@@ -3,47 +3,46 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import mateus from '../../public/mateus.jpeg'
-import marcio from '../../public/marcio.jpeg'
-import lucas from '../../public/lucas.jpeg'
-import jader from '../../public/jader.jpeg'
-import laura from '../../public/laura.jpeg'
+import mateus from '../../public/assets/clientes/mateus.jpeg'
+import marcio from '../../public/assets/clientes/marcio.jpeg'
+import lucas from '../../public/assets/clientes/lucas.jpeg'
+import jader from '../../public/assets/clientes/jader.jpeg'
+import laura from '../../public/assets/clientes/laura.jpeg'
 
 
 import Image from "next/image";
 
 const testimonials = [
     {
-        content: "O serviço foi impecável! A equipe tratou a Luna com muito carinho e atenção. Voltarei com certeza.",
+        content: "O serviço foi impecável! A instalação do ar condicionado foi rápida, muito limpa e a equipe explicou exatamente como usar as funções econômica do aparelho.",
         author: "Mateus Henrique dos Santos",
-        role: "Geovana Kendra Kaufman",
+        role: "Cliente Residencial", 
         image: mateus,
     },
     {
-        content: "Muito profissionalismo. O Thor ficou super tranquilo e o resultado do banho foi excelente.",
+        content: "Muito profissionalismo. Chamei para consertar um aparelho antigo que ninguém resolvia e eles deixaram funcionando como novo. Recomendo!",
         author: "Marcio Antonio da Silva",
-        role: "Andressa Garcia",
+        role: "Cliente Residencial",
         image: marcio,
     },
     {
-        content: "Adorei o atendimento e o cuidado com meus pets. Recomendo para todos!",
+        content: "A higienização fez toda a diferença. O cheiro de mofo sumiu e o ar voltou a gelar muito mais. Atendimento nota 10 da equipe.",
         author: "Camila Fernandes",
-        role: "Tutora da Mel e do Max",
+        role: "Cliente Residencial",
         image: lucas,
     },
     {
-        content: "Adorei o atendimento e o cuidado com meus pets. Recomendo para todos!",
-        author: "Camila Fernandes",
-        role: "Tutora da Mel e do Max",
+        content: "Sempre faço a manutenção preventiva com a Sebold. Eles são pontuais, honestos no diagnóstico e o preço é muito justo pela qualidade entregue.",
+        author: "Jorge Almeida",
+        role: "Cliente Comercial",
         image: jader,
     },
     {
-        content: "Adorei o atendimento e o cuidado com meus pets. Recomendo para todos!",
-        author: "Camila Fernandes",
-        role: "Tutora da Mel e do Max",
+        content: "Precisava de uma carga de gás com urgência nesse calor e me atenderam super rápido. Profissionais muito educados e capacitados.",
+        author: "Laura",
+        role: "Cliente Residencial",
         image: laura,
     },
-    
 ]
 
 export function Testimonials() {

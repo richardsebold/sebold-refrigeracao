@@ -3,8 +3,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-azul-primario: #1C4D8D;
-  --color-azul-secundario: #4988C4;
+  --color-azul-primario: #1c4d8d;
+  --color-azul-secundario: #4988c4;
   --font-inter: var(--font-inter);
   --font-monteserrat: var(--font-montserrat);
   --radius-sm: calc(var(--radius) - 4px);
@@ -126,6 +126,3 @@
 }
 
 /* Adicione isto ao seletor html ou body no seu CSS global */
-html {
-  scroll-behavior: smoothnes;
-}
