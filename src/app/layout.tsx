@@ -7,6 +7,7 @@ import { Inter,
 import "./globals.css";
 import WhatsAppButton from "../components/WhatsappButton";
 import Header from "@/components/Header";
+import AosInit from "@/components/aos-init";
 
 
 // const agbalumo = Agbalumo({
@@ -41,8 +42,8 @@ export default function RootLayout({
         suppressHydrationWarning className={`${inter.className} font-sntialiased`}
       >
         <main>
-          <Header />
           {children}
+          <AosInit />
           <WhatsAppButton />
         </main>
       </body>

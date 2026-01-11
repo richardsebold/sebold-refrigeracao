@@ -124,3 +124,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Adicione isto ao seletor html ou body no seu CSS global */
+html {
+  scroll-behavior: smoothnes;
+}

@@ -1,64 +1,68 @@
-
-
-import { Services } from "./Services";
-import { InstagramLogoIcon, WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
-import { FacebookLogoIcon, 
-  // WhatsappLogoIcon 
-} from "@phosphor-icons/react/dist/ssr";
-import { 
-  // BadgeCheck, 
-  MapPin, TextAlignJustify } from "lucide-react";
+import { Carousel } from "./Carousel";
+import { InstagramLogoIcon, WhatsappLogoIcon, FacebookLogoIcon } from "@phosphor-icons/react/dist/ssr";
+import { BadgeCheck, Calendar, HomeIcon, MapPin, Phone, TextAlignJustify, ThumbsUp } from "lucide-react";
 import Image from "next/image";
-// import OrcamentoWhatsapp from "./header/OrcamentoWhatsapp";
-// import { phoneNumber, message } from "./WhatsappButton";
-
 
 export default function Header() {
   'use client'
 
   return (
-    <header className="flex w-
-    full flex-col justify-center items-center bg-white">
+    <header className="flex w-full flex-col justify-center items-center bg-white" id="home">
 
-        {/* <OrcamentoWhatsapp /> */}
-
-
-        <div className="flex flex-col items-center justify-center gap-2">
-          <Image src="/logo-cab.jpg" alt="Sebold Refrigeracao" width={400} height={100} />
-          {/* <div className="flex flex-col items-center text-center justify-center gap-4">
-            <div className="flex gap-1.5">
-              <BadgeCheck className="text-[#049B8D]" /> <p>Há mais de 20 anos no mercado</p>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-3">
+            
+            {/* 1. LOGO */}
+            <div className="">
+              <Image
+              src="/logo-cab.jpg"
+              alt="Sebold Refrigeracao"
+              className="object-contain"
+              width={400}
+              height={100}
+            />
             </div>
-            <div className="flex gap-1">
-              <MapPin className="text-[#049B8D]" /> <p>Joinville - SC</p>
+
+            {/* 2. INFO DESKTOP */}
+            <div className="hidden md:grid grid-cols-3 gap-6 flex-1 max-w-4xl">
+                
+                {/* Item 1 */}
+                <div className="flex flex-col items-center justify-center text-center border-r border-gray-200 px-4 last:border-none" data-aos="fade-up">
+                    <Calendar className="text-[#049B8D] mb-3 w-8 h-8" />
+                    <h3 className="font-bold text-gray-800 text-sm lg:text-base">Segunda a Sábado</h3>
+                    <p className="text-xs lg:text-sm text-gray-500 mt-1">8:00 às 22:00<br/>Plantão aos domingos</p>
+                </div>
+
+                {/* Item 2 */}
+                <div className="flex flex-col items-center justify-center text-center border-r border-gray-200 px-4 last:border-none" data-aos="fade-up">
+                    <ThumbsUp className="text-[#049B8D] mb-3 w-8 h-8" />
+                    <h3 className="font-bold text-gray-800 text-sm lg:text-base">Garantia de Serviço</h3>
+                    <p className="text-xs lg:text-sm text-gray-500 mt-1">1 ano de garantia<br/>na instalação</p>
+                </div>
+
+                {/* Item 3 */}
+                <div className="flex flex-col items-center justify-center text-center px-4" data-aos="fade-up">
+                    <Phone className="text-[#049B8D] mb-3 w-8 h-8" />
+                    <h3 className="font-bold text-gray-800 text-sm lg:text-base">(47) 99934-8969</h3>
+                    <p className="text-xs lg:text-sm text-gray-500 mt-1">Joinville - SC<br/>Atendimento rápido</p>
+                </div>
             </div>
-          </div> */}
-        </div>
 
-        <div className="container h-18 mt-2 w-screen bg-[#049B8D] flex items-center justify-between text-center px-2">
-          <div className="bg-[#049B8D] w-12 h-12 flex items-center justify-center">
-            <TextAlignJustify size={40} color="white" />
-          </div>
+            {/* 3. INFO MOBILE (Visível apenas em celulares) */}
+            <div className="flex flex-col items-center text-center justify-center gap-3 md:hidden mt-2 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <BadgeCheck className="text-[#049B8D] w-5 h-5" /> 
+                <p>Há mais de 20 anos no mercado</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="text-[#049B8D] w-5 h-5" /> 
+                <p>Joinville - SC</p>
+              </div>
+            </div>
 
-          <div className="flex gap-2">
-
-            <a href={`https://wa.me/554799348969?text=Olá, vim pelo site e gostaria de saber mais informações.`}>
-              <WhatsappLogoIcon color="white" size={40} weight="regular" />
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100054529447699" target="_blank" rel="noopener noreferrer">
-              <FacebookLogoIcon color="white" size={40} weight="regular" />
-            </a>
-            <a href="https://www.instagram.com/seboldrefrigeracao/" target="_blank" rel="noopener noreferrer">
-              <InstagramLogoIcon color="white" size={40} weight="regular" />
-            </a>
-            <a href="https://share.google/1wgkfG3IX9TkNRiXH" target="_blank" rel="noopener noreferrer">
-              <MapPin color="white" size={40}/>
-            </a>
           </div>
         </div>
-
-        <Services />
-
+        {/* --- FIM DO BLOCO DE INFORMAÇÕES --- */}
     </header>
   );
 }

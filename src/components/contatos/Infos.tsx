@@ -4,42 +4,77 @@ import { Separator } from "../ui/separator";
 
 export default function Infos() {
     return (
-        <div className="flex flex-col items-center justify-center my-12 gap-12 px-4 md:px-0">
-            <div className="flex flex-col md:flex-row items-center justify-center my-12 gap-12 px-4 md:px-0">
-                <div className="flex flex-col items-center justify-center gap-4">
-                    <h2 className="text-2xl font-bold">Informações de contato Sebold Refrigeração</h2>
-                    <p>Oferecemos servico de emergencia 24/7 para todos os nossos clientes. Voce sempre pode contar com os especialistas da Ar Condicionado Joinville para ajuda-los rapidamente e fazer o trabalho corretamente na primeira vez.</p>
-                    <p>Utilizamos equipamentos de diagnóstico de ponta para encontrar a fonte dos seus problemas de aquecimento e ar condicionado e solucioná-los rapidamente.</p>
+        <div className="w-full max-w-7xl mx-auto px-4 py-16" id="contact">
+            
+            {/* Grid Principal: Divide o conteúdo em 2 colunas em telas grandes */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16 items-start">
+                
+                {/* Coluna 1: Sobre a Empresa */}
+                <div className="flex flex-col gap-6">
+                    <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+                        Informações de contato <strong className="text-[#049B8D]"><br />Sebold Refrigeração</strong>
+                    </h2>
+                    
+                    <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                        <p>
+                            Oferecemos serviço de emergência 24/7 para todos os nossos clientes. 
+                            Você sempre pode contar com os especialistas da Ar Condicionado Joinville 
+                            para ajudá-los rapidamente e fazer o trabalho corretamente na primeira vez.
+                        </p>
+                        <p>
+                            Utilizamos equipamentos de diagnóstico de ponta para encontrar a fonte 
+                            dos seus problemas de aquecimento e ar condicionado e solucioná-los rapidamente.
+                        </p>
+                    </div>
                 </div>
 
-                <div className="flex flex-col gap-10">
-                    <div className="flex flex-col gap-3">
-                        <div className="flex gap-2">
-                            <Phone size={32} />
-                            <h2 className="text-2xl">Telefone</h2>
+                {/* Coluna 2: Lista de Contatos */}
+                <div className="flex flex-col gap-6 bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+                    
+                    {/* Item: Telefone */}
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-white rounded-lg shadow-sm text-[#049B8D]">
+                            <Phone size={24} />
                         </div>
-                        <p>Telefone de contato: +55 47 99934-8969</p>
-                    </div>
-                    <Separator />
-                    <div className="flex flex-col gap-3">
-                        <div className="flex gap-2">
-                            <Mail size={32} />
-                            <h2 className="text-2xl">Email</h2>
+                        <div>
+                            <h3 className="font-bold text-xl text-gray-900">Telefone</h3>
+                            <p className="text-gray-600 mt-1">+55 47 99934-8969</p>
                         </div>
-                        <p>Email para contato: seboldrefrigeracao@gmail.com</p>
                     </div>
-                    <Separator />
-                    <div className="flex flex-col gap-3">
-                        <div className="flex gap-2">
-                            <MapPin className="relative right-1" size={32} />
-                            <h2 className="text-2xl">Localização</h2>
+
+                    <Separator className="bg-gray-200" />
+
+                    {/* Item: Email */}
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-white rounded-lg shadow-sm text-[#049B8D]">
+                            <Mail size={24} />
                         </div>
-                        <p>Localização: +55 47 99934-8969</p>
+                        <div className="overflow-hidden"> {/* overflow evita que email longo quebre o layout */}
+                            <h3 className="font-bold text-xl text-gray-900">Email</h3>
+                            <p className="text-gray-600 mt-1 wrap-break-words">seboldrefrigeracao@gmail.com</p>
+                        </div>
                     </div>
+
+                    <Separator className="bg-gray-200" />
+
+                    {/* Item: Localização */}
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-white rounded-lg shadow-sm text-[#049B8D]">
+                            <MapPin size={24} />
+                        </div>
+                        <div>
+                            <h3 className="font-bold text-xl text-gray-900">Localização</h3>
+                            <p className="text-gray-600 mt-1 max-w-xs">
+                                Rua Corona Austrális N-61, Jardim Paraiso, Joinville - SC
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div className="h-full w-full justify-center items-center">
+            {/* Seção do Mapa */}
+            <div className="w-full h-100 rounded-2xl overflow-hidden shadow-md border border-gray-200">
                 <Maps />
             </div>
         </div>
