@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, 
+import {
+  Inter,
   // Montserrat 
-} 
+}
   from "next/font/google";
 // import { Agbalumo } from "next/font/google";
 import "./globals.css";
@@ -26,26 +27,61 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  title: "Sebold Refrigeração - Especialistas em Refrigeração e Climatização",
-  description: "Serviços de Refrigeração Residencial e Comercial em Joinville - SC",
+  title: {
+    default: "Sebold Refrigeração - Especialistas em Refrigeração e Climatização",
+    template: "%s | Sebold Refrigeração",
+  },
+  description: "Instalação e manutenção de ar condicionado é com a Sebold Refrigeração. Atendemos Joinville e região com qualidade há mais de 20 anos. Confira!",
+  keywords: [
+    "Refrigeração",
+    "Climatização",
+    "Instalação",
+    "Manutenção",
+    "Sebold Refrigeração",
+  ],
+  authors: [{ name: "Adir Sebold", url: "https://seboldrefrigeracao.com.br" }],
+  creator: "Sebold Refrigeração",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://seboldrefrigeracao.com.br",
+    title: "Sebold Refrigeração - Especialistas em Refrigeração e Climatização",
+    images: [
+      {
+        url: "/assets/logo-cab.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    siteName: "Sebold Refrigeração",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        suppressHydrationWarning className={`${inter.className} font-sntialiased`}
-      >
-        <main>
-          {children}
-          <AosInit />
-          <BotaoWhatsapp />
-        </main>
-      </body>
-    </html>
-  );
+  export default function RootLayout({
+    children,
+  }: Readonly<{
+    children: React.ReactNode;
+  }>) {
+    return (
+      <html lang="en" className="scroll-smooth">
+        <body
+          suppressHydrationWarning className={`${inter.className} font-sntialiased`}
+        >
+          <main>
+            {children}
+            <AosInit />
+            <BotaoWhatsapp />
+          </main>
+        </body>
+      </html>
+    );
 }
