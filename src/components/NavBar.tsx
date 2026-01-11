@@ -25,10 +25,10 @@ export default function NavigationManager() {
   const MobileMenuDropdown = () => (
     <div
       className={`
-        absolute top-full left-0 w-full bg-white shadow-xl
+        w-full bg-white shadow-xl
         border-t-4 border-[#049B8D]
         transition-all duration-500 ease-in-out overflow-hidden
-        z-2000 md:hidden
+        z-50 md:hidden
         ${isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
       `}
     >
@@ -57,8 +57,8 @@ export default function NavigationManager() {
   return (
     <div className="w-full overflow-x-hidden">
 
-      {/* ================= BARRA ESTÁTICA ================= */}
-      <div className="w-full bg-[#049B8D] mt-2 shadow-md relative z-40">
+      {/* ================= BARRA MOBILE ================= */}
+      <div className="w-full bg-[#049B8D] mt-2 shadow-md relative z-40 md:hidden">
         <div className="container mx-auto h-16 flex items-center justify-between px-4">
 
           <div className="flex items-center gap-4">
@@ -68,7 +68,24 @@ export default function NavigationManager() {
             >
               {isMenuOpen ? <X size={32} /> : <AlignJustify size={32} />}
             </button>
+          </div>
 
+          <div className="flex gap-3">
+            <WhatsappLogoIcon size={32} color="white" />
+            <FacebookLogoIcon size={32} color="white" />
+            <InstagramLogoIcon size={32} color="white" />
+            <MapPin size={32} color="white" />
+          </div>
+        </div>
+
+        {!scrolled && <MobileMenuDropdown />}
+      </div>
+
+      {/* ================= BARRA ESTÁTICA DESKTOP ================= */}
+      <div className="w-full bg-[#049B8D] mt-2 shadow-md relative z-40 hidden md:block">
+        <div className="container mx-auto h-16 flex items-center justify-between px-4">
+
+          <div className="flex items-center gap-4">
             <div className="hidden md:flex gap-2">
               {navLinks.map(link => (
                 <a
@@ -89,8 +106,6 @@ export default function NavigationManager() {
             <MapPin size={32} color="white" />
           </div>
         </div>
-
-        {!scrolled && <MobileMenuDropdown />}
       </div>
 
       {/* ================= BARRA FIXA ================= */}
