@@ -51,7 +51,7 @@ function MobileMenuDropdown({ isMenuOpen, setIsMenuOpen }: MobileMenuDropdownPro
   )
 }
 
-export default function NavigationManager() {
+export default function NavigationManager() { 
   const [scrolled, setScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 

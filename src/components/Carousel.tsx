@@ -10,38 +10,43 @@ export function Carousel() {
     const services = [
         {
             title: "INSTALAÇÃO DE AR CONDICIONADO",
+            phoneNumber: '554799348969',
             descripition: "Especialista em instalação de Ar Condicionado split e central.",
             urlImage: "/assets/carrosel/ac1.jpg",
             icon: <ThermometerSnowflake size={40} />,
-            linkText: 'Olá, gostaria de saber mais sobre instalação de ar condicionado.'
+            linkText: 'Olá, vim pelo site e gostaria de saber mais sobre instalação de ar condicionado.'
         },
         {
             title: "MANUTENÇÃO DE MÁQUINA DE LAVAR",
+            phoneNumber: '554799348969',
             descripition: "Diagnóstico preciso e reparo especializado para sua lavadora.",
             urlImage: "/assets/carrosel/gemini_maquinaLavar.png",
             icon: <Wrench size={40} />,
-            linkText: 'Olá, gostaria de saber mais sobre manutenção de máquina de lavar.'
+            linkText: 'Olá, vim pelo site e gostaria de saber mais sobre manutenção de máquina de lavar.'
         },
         {
             title: "MANUTENÇÃO DE AR CONDICIONADO",
+            phoneNumber: '554799348969',
             descripition: "Limpeza química, higienização e carga de gás completa.",
             urlImage: "/assets/carrosel/acCleaning.jpg",
             icon: <CarTaxiFront size={40} />,
-            linkText: 'Olá, gostaria de saber mais sobre manutenção de ar condicionado.'
+            linkText: 'Olá, vim pelo site e gostaria de saber mais sobre manutenção de ar condicionado.'
         },
         {
             title: "REPARO DE GELADEIRAS",
+            phoneNumber: '554799348969',
             descripition: "Assistência técnica especializada em refrigeradores e freezers.",
             urlImage: "/assets/carrosel/gemini_geladeira.png",
             icon: <Refrigerator size={40} />,
-            linkText: 'Olá, gostaria de saber mais sobre reparo de geladeiras.'
+            linkText: 'Olá, vim pelo site e gostaria de saber mais sobre reparo de geladeiras.'
         },
         {
             title: "REPARO",
-            descripition: "Assistência técnica especializada em refrigeradores e freezers.",
+            phoneNumber: '554799348969',
+            descripition: "Assistência técnica especializada em refrigeradores, freezers, maquinas de lavar, ar condicionado e microondas.",
             urlImage: "/assets/carrosel/ac2.jpg",
             icon: <Refrigerator size={40} />,
-            linkText: 'Olá, gostaria de saber mais sobre reparo de geladeiras.'
+            linkText: 'Olá, vim pelo site e gostaria de saber mais sobre reparo de geladeiras.'
         },
 
     ]
@@ -97,7 +102,7 @@ export function Carousel() {
 
                                             <div className="flex items-center justify-center">
                                                 <div className="">
-                                                    <a target="_blank" href={`https://wa.me/5547997714395?text=${item.linkText}`} className="items-center flex justify-center bg-[#25D366] gap-2 md:hover:bg-green-500 px-6 py-2 rounded-md transition-all hover:scale-105 duration-300 ">
+                                                    <a target="_blank" href={`https://wa.me/${item.phoneNumber}?text=${item.linkText}`} className="items-center flex justify-center bg-[#25D366] gap-2 md:hover:bg-green-500 px-6 py-2 rounded-md transition-all hover:scale-105 duration-300 ">
                                                         <WhatsappLogoIcon className="w-5 h-5" />
                                                         <p className="uppercase">Agendar</p>
                                                     </a>
