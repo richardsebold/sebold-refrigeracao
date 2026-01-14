@@ -7,7 +7,7 @@
 [PROJECT__URL]: https://sebold-refrigeracao.vercel.app
 [NODE_BADGE]:https://img.shields.io/badge/node.js-20.16.0-43853D?style=for-the-badge&logo=node.js
 
-<h1 align="center" style="font-weight: bold;">Sebold Refrigeração 💻</h1>
+<h1 align="center" style="font-weight: bold;">Sebold Refrigeração ❄️</h1>
 
 ![license][LICENSE__BADGE]
 ![react][REACT__BADGE]
@@ -16,53 +16,60 @@
 ![javascript][JAVASCRIPT__BADGE]
 ![node][NODE_BADGE]
 
-<details open="open">
-<summary>Table of Contents</summary>
- 
-- [📌 About](#started)
-- [🚀 Getting started](#started)
-  - [Prerequisites](#prerequisites)
-  - [Cloning](#cloning)
-  - [Starting](#starting)
-  
-</details>
+![Project Banner]([(./public/prints/capa-projeto.png)])
+
+## 💻 Sobre o Projeto
+
+Este projeto é uma Landing Page desenvolvida para a empresa Sebold Refrigeração. O objetivo principal da página é apresentar os serviços da empresa de forma moderna, performática e responsiva, garantindo uma excelente experiência de usuário (UX) e altas taxas de conversão.
+
+## 🛠 Tech Stack
+
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+* **Core:** [Next.js](https://nextjs.org/) & [React](https://react.dev/)
+* **Linguagens:** TypeScript & JavaScript
+* **UI Components:** [Shadcn UI](https://ui.shadcn.com/)
+* **Ícones:** [Lucide React](https://lucide.dev/) & [Phosphor Icons](https://phosphoricons.com/)
+* **Estilização:** Tailwind CSS (Base do Shadcn)
+
+## ✨ Funcionalidades
+
+* **Design Responsivo:** Layout adaptável para mobile, tablet e desktop.
+* **Performance:** Otimizado com as melhores práticas do Next.js (SSR/ISR).
+* **Componentização:** Interface modular construída com Shadcn UI.
+* **Acessibilidade:** Componentes acessíveis e semânticos.
+
+## 💡 A Solução
+
+O desafio foi criar uma interface limpa e profissional para a Sebold Refrigeração. Para garantir agilidade no desenvolvimento sem perder a qualidade visual e acessibilidade, optei por utilizar **Shadcn UI**, que permite componentes customizáveis e leves.
 
 
-<p align="center">
-    <img src="../.github/example.png" alt="Image Example" width="400px">
-</p>
+## 🚀 Como executar o projeto
 
-<h2 id="started">📌 About</h2>
+<h3>Pré-requisitos</h3>
 
-Simple description of what your project do or how to use it.
-
-[![project][PROJECT__BADGE]][PROJECT__URL]
-
-<h2 id="started">🚀 Getting started</h2>
-
-Here you describe how to run your project locally
-
-<h3>Prerequisites</h3>
-
-Here you list all prerequisites necessary for running your project. For example:
+Os pré-requisitos necessários para executar o projeto localmente, são ter as seguintes tecnologias instaladas no seu computador:
 
 - [NodeJS](https://github.com/)
-- [Git 2](https://github.com)
+- [Git](https://github.com)
 
-<h3>Cloning</h3>
-
-How to clone your project
-
+1. Clone o repositório:
 ```bash
-git clone your-project-url-in-github
+git clone https://github.com/richardsebold/sebold-refrigeracao/
 ```
 
-<h3>Starting</h3>
-
-How to start your project
+2. Instale as dependências:
 
 ```bash
-cd project-name
 npm install
+# ou
+yarn install
+# ou
+pnpm install
 ```
 
+3. Execute o servidor de desenvolvimento:
+
+``` bash
+npm run dev
+```
