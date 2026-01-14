@@ -5,18 +5,31 @@
 [NEXT__BADGE]: https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white
 [PROJECT__BADGE]: https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project
 [PROJECT__URL]: https://sebold-refrigeracao.vercel.app
-[NODE_BADGE]:https://img.shields.io/badge/node.js-20.16.0-43853D?style=for-the-badge&logo=node.js
+[PROJECT__PRINT]: ./public/prints/capa-projeto.png
+[NODE_BADGE]: https://img.shields.io/badge/node.js-20.16.0-43853D?style=for-the-badge&logo=node.js
 
-<h1 align="center" style="font-weight: bold;">Sebold Refrigeração ❄️</h1>
+<div align="center">
 
-![license][LICENSE__BADGE]
-![react][REACT__BADGE]
-![Next JS][NEXT__BADGE]
-![typescript][TYPESCRIPT__BADGE]
-![javascript][JAVASCRIPT__BADGE]
-![node][NODE_BADGE]
+  <h1 style="font-weight: bold;">Sebold Refrigeração ❄️</h1>
 
-![Project Banner]([(./public/prints/capa-projeto.png)])
+  ![license][LICENSE__BADGE]
+  ![react][REACT__BADGE]
+  ![Next JS][NEXT__BADGE]
+  ![typescript][TYPESCRIPT__BADGE]
+  ![javascript][JAVASCRIPT__BADGE]
+  ![node][NODE_BADGE]
+
+  <br><br>
+
+  <div align="center">
+  <img src="./public/prints/capa-projeto.png" alt="Preview do Site" width="60%" />
+  </div>
+
+  <br>
+
+  [![Visit Project][PROJECT__BADGE]][PROJECT__URL]
+
+</div>
 
 ## 💻 Sobre o Projeto
 
