@@ -34,7 +34,7 @@ function MobileMenuDropdown({ isMenuOpen, setIsMenuOpen }: MobileMenuDropdownPro
             key={link.name}
             href={link.href}
             onClick={() => setIsMenuOpen(false)}
-            className="text-xl font-bold text-gray-700 hover:text-[#049B8D] transition-colors uppercase tracking-wider border-2 p-2 rounded-md"
+            className="text-xl text-center font-bold text-gray-700 hover:text-[#049B8D] transition-colors uppercase tracking-wider w-32 p-2 rounded-md"
           >
             {link.name}
           </a>
@@ -101,7 +101,7 @@ export default function NavigationManager() {
         <div className="container mx-auto h-16 flex items-center justify-between px-4 md:px-30">
 
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex gap-2" data-aos="fade-right">
+            <div className="hidden md:flex gap-6" data-aos="fade-right">
               {navLinks.map(link => (
                 <a
                   key={link.name}
@@ -133,7 +133,7 @@ export default function NavigationManager() {
 
       {/* ================= BARRA FIXA ================= */}
       <div
-        className={`fixed top-0 left-0 w-full bg-[#049B8D] shadow-xl transition-transform duration-500 z-50 ${scrolled ? "translate-y-0" : "-translate-y-full"}`}
+        className={`fixed top-0 left-0 w-full bg-white shadow-xl transition-transform duration-500 z-50 ${scrolled ? "translate-y-0" : "-translate-y-full"}`}
       >
         {/* Adicionei 'relative' aqui para a logo poder se centralizar baseada neste container */}
         <div className="container mx-auto h-20 flex items-center justify-between px-4 md:px-30 relative">
@@ -146,16 +146,16 @@ export default function NavigationManager() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors"
             >
-              {isMenuOpen ? <X size={32} /> : <AlignJustify size={32} color="white" />}
+              {isMenuOpen ? <X size={32} color="#049B8D" /> : <AlignJustify size={32} color="#049B8D" />}
             </button>
 
             
-            <div className="hidden md:block relative w-32 h-12 bg-white rounded-md overflow-hidden shadow-sm">
+            <div className="hidden md:block relative w-32 h-12 overflow-hidden">
               <Image
-                src="/assets/logo-cab.jpg"
+                src="/assets/logo-cab.png"
                 alt="Logo"
                 fill
-                className="object-contain p-1"
+                className="object-contain"
               />
             </div>
           
@@ -163,12 +163,12 @@ export default function NavigationManager() {
             
 
             {/* Menu Desktop (Links na Esquerda) */}
-            <nav className="hidden md:flex gap-6 text-white font-bold">
+            <nav className="hidden md:flex gap-6 text-white font-bold mx-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-white text-sm lg:text-base font-bold p-2 hover:bg-white/10 rounded-md hover:scale-105 transition-all duration-300"
+                  className="text-[#049B8D] text-sm lg:text-base font-bold p-2 hover:bg-gray-100 rounded-md hover:scale-105 transition-all duration-300"
                 >
                   {link.name}
                 </a>
@@ -178,12 +178,12 @@ export default function NavigationManager() {
 
           {/* --- 2. CENTRO: Logo (Absolute para garantir o centro exato) --- */}
           <div className="md:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="relative w-32 h-12 bg-white rounded-md overflow-hidden shadow-sm">
+            <div className="relative w-32 h-12 bg-white overflow-hidden">
               <Image
-                src="/assets/logo-cab.jpg"
+                src="/assets/logo-cab.png"
                 alt="Logo"
                 fill
-                className="object-contain p-1"
+                className="object-contain"
               />
             </div>
           </div>
@@ -194,7 +194,7 @@ export default function NavigationManager() {
           <div>
             <a
               href="https://wa.me/554799348969"
-              className="hidden sm:block bg-white text-[#049B8D] px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition-all duration-300 shadow-md"
+              className="hidden sm:block bg-[#049B8D] text-white px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition-all duration-300 shadow-md"
             >
               PEDIR ORÇAMENTO
             </a>

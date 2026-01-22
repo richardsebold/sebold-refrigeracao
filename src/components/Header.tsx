@@ -10,12 +10,12 @@ export default function Header() {
         <div className="container mx-auto px-4 md:px-20">
           <div className="flex flex-col md:flex-row items-center justify-between mb-3">
             
-            <div className="">
+            <div className="p-4 mt-6">
               <Image
-              src="/assets/logo-cab.jpg"
+              src="/assets/logo-cab.png"
               alt="Sebold Refrigeracao"
               className="object-contain"
-              width={400}
+              width={300}
               height={100}
             />
             </div>
