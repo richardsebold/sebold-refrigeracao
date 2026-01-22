@@ -9,6 +9,7 @@ import "./globals.css";
 import AosInit from "@/components/aos-init";
 import BotaoWhatsapp from "@/components/BotaoWhatsapp";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // const agbalumo = Agbalumo({
 //   weight: ["400"],
@@ -79,6 +80,7 @@ export const metadata: Metadata = {
           <main>
             {children}
             <Analytics />
+            <SpeedInsights />
             <AosInit />
             <BotaoWhatsapp />
           </main>
